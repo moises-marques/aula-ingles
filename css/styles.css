@@ -153,3 +153,12 @@ main {
     border-radius: 10px;
 }
 
+#restart-timer-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #1b04ee;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+

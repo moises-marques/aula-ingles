@@ -21,17 +21,34 @@
 
 <main>
     <section class="page">
-        <h1>Exercícios</h1>
+            <h1>Exercícios</h1>
+
+                    <!-- Caixa de pontuação (fica acima do quiz) -->
+            <div id="score-box">
+                Pontuação: <span id="score">0</span>
+            </div>
+
+                        <!-- Caixa de tempo -->
+            <div id="timer-box">
+                Tempo restante: <span id="timer">10</span>s
+            </div>
+
+            <button id="restart-timer-btn">Reiniciar Tempo</button>
+
             <div id="quiz">
                 <p>Pergunta 1: Como se diz "Olá" em inglês?</p>
                 <button class="quiz-option">Hello</button>
                 <button class="quiz-option">Bye</button>
                 <button class="quiz-option">Thanks</button>
             </div>
-        <button id="comprar">Comprar Versão Completa</button>
+        
     </section>
 
 </main>
+
+
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
