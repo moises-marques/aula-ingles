@@ -198,9 +198,10 @@ function proximaPergunta() {
 document.addEventListener("DOMContentLoaded", proximaPergunta);
 
                                 
-// ===============================
-// PONTUAÇÃO
-// ===============================
+                // ===============================
+                // PONTUAÇÃO
+                // ===============================
+
 let score = 0; 
 const scoreDisplay = document.getElementById("score");
 
@@ -209,23 +210,10 @@ function atualizarPontuacao() {
     scoreDisplay.textContent = score;
 }
 
-// Ajusta o clique das opções do quiz
-// document.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("quiz-option")) {
-//         const resposta = e.target.textContent.trim();
+                    // ===============================
+                    // TEMPO POR PERGUNTA
+                    // ===============================
 
-//         if (resposta === "Hello") {
-//             atualizarPontuacao();
-//             alert("✔️ Correto! +1 ponto");
-//         } else {
-//             alert("❌ Errado. Tente novamente!");
-//         }
-//     }
-// });
-
-// ===============================
-// TEMPO POR PERGUNTA
-// ===============================
 let tempo = 10; // segundos
 let intervalo;
 const timerDisplay = document.getElementById("timer");
@@ -259,9 +247,10 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// ===============================
-// BOTÃO REINICIAR TEMPO
-// ===============================
+                    // ===============================
+                    // BOTÃO REINICIAR TEMPO
+                    // ===============================
+
 const restartBtn = document.getElementById("restart-timer-btn");
 
 if (restartBtn) {
@@ -269,6 +258,44 @@ if (restartBtn) {
         iniciarTimer(); // usa sua própria função
     });
 }
+
+                    // ===============================
+                    // BOTÃO REINICIAR QUIZ
+                    // ===============================
+
+const restartQuizBtn = document.getElementById("restart-quiz-btn");
+
+if (restartQuizBtn) {
+    restartQuizBtn.addEventListener("click", () => {
+
+        // Reinicia pontuação
+        score = 0;
+        scoreDisplay.textContent = score;
+
+        // Reinicia listas de perguntas
+        perguntasFixas = [
+            { pergunta: 'Como se diz "Olá" em inglês?', respostas: ['Hello', 'Bye', 'Thanks'], correta: 'Hello' },
+            { pergunta: 'Como se diz "Obrigado" em inglês?', respostas: ['Please', 'Thank you', 'Sorry'], correta: 'Thank you' },
+            { pergunta: 'Como se diz "Por favor" em inglês?', respostas: ['Please', 'Hello', 'Good night'], correta: 'Please' },
+            { pergunta: 'Como se diz "Bom dia" em inglês?', respostas: ['Good night', 'Thanks', 'Good morning'], correta: 'Good morning' },
+            { pergunta: 'Como se diz "Desculpa" em inglês?', respostas: ['Excuse me', 'Hello', 'Bye'], correta: 'Excuse me' }
+        ];
+
+        usadas = []; // limpa histórico
+
+        alert("🔄 Quiz reiniciado!");
+
+        proximaPergunta(); // volta para a primeira pergunta
+        iniciarTimer();    // reinicia o tempo
+    });
+}
+
+                                    
+
+
+                   
+
+
 
 
 

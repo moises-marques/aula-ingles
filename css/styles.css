@@ -56,9 +56,10 @@ h1 {
 
 
 
-/* ============================
-   SEÇÕES (PÁGINAS)
-============================ */
+                        /* ============================
+                        SEÇÕES (PÁGINAS)
+                        ============================ */
+
 main {
     max-width: 900px;
     margin: 20px auto;
@@ -71,9 +72,9 @@ main {
     margin-top: 0;
 }
 
-/* ============================
-   QUIZ E BOTÕES
-============================ */
+                        /* ============================
+                        QUIZ E BOTÕES
+                        ============================ */
 .quiz-option {
     display: block;
     margin: 10px 0;
@@ -130,7 +131,7 @@ main {
     }
 }
 
-/* ===== Introdução da Página ===== */
+                 /* ===== Introdução da Página ===== */
 
 .intro-title {
     text-align: center;
@@ -153,6 +154,28 @@ main {
     border-radius: 10px;
 }
 
+                                /* PONTUAÇÃO */
+
+#score-box {
+    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    display: inline-block; /* ← ESSA LINHA resolve */
+    border-radius: 6px;
+}
+
+
+                            /* TEMPO RESTANTE */
+
+#timer-box {
+    margin: 30px;
+    padding: 10px 20px;
+    background: #1b04ee;
+    color: #fff;
+}
+
+                       /* BOTÃO DE REINICIA O TEMPO */
+
 #restart-timer-btn {
     padding: 10px 20px;
     border-radius: 10px;
@@ -160,5 +183,222 @@ main {
     color: #fff;
     cursor: pointer;
     border: none;
+    margin-left: 15px;
 }
+
+#restart-timer-btn:hover {
+    background: #3b82f6;
+}
+
+                       /* BOTÃO DE REINICIAR O QUESTIONÁRIO */
+
+#restart-quiz-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #1b04ee;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+}
+
+#restart-quiz-btn:hover {
+    background: #3b82f6;
+}
+
+                                       /* PERGUNTAS */
+
+#quiz p {
+    padding: 10px 220px;
+    background: #1b04ee;
+    color: #fff;
+    display: inline-block; /* ← ESSA LINHA resolve */
+    border-radius: 6px;
+}
+
+                               /* Difficulty selector page5 */
+
+                         /* ===== Page5 controls & layout ===== */
+
+/* ===== PAGE 5 – ADVANCED EXERCISES ===== */
+
+/* container do quiz */
+#quiz-p5 {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+
+/* texto da pergunta */
+#quiz-p5 p {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* botões de resposta */
+#quiz-p5 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#quiz-p5 .options .opt {
+    padding: 12px;
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#quiz-p5 .options .opt:hover {
+    background: #1e4f86;
+}
+
+/* botões de controle */
+#next-p5,
+#restart-p5 {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#next-p5 {
+    background: #38a169;
+    color: white;
+}
+
+#next-p5:hover {
+    background: #2f855a;
+}
+
+#restart-p5 {
+    background: #e53e3e;
+    color: white;
+}
+
+#restart-p5:hover {
+    background: #c53030;
+}
+
+/* contadores */
+p span {
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+                             /* CODIGO SELETOR PAGINA 5 */
+
+/*
+ * --------------------------------
+ * Estilo para o Seletor de Dificuldade
+ * --------------------------------
+ */
+
+/* Container principal */
+#difficulty-box {
+    /* Centraliza o conteúdo e adiciona espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto da label à esquerda */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f4f7f9; /* Fundo suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 300px; /* Limita a largura em telas maiores */
+    margin: 20px auto; /* Centraliza o bloco na página */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Label (rótulo) */
+#difficulty-box label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Cor escura para o texto */
+    transition: color 0.3s ease;
+}
+
+/* Estilo do elemento <select> */
+#difficulty-select {
+    /* Dimensões e aparência */
+    width: 100%; /* Ocupa a largura total do container */
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #007bff; /* Cor principal de destaque */
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #b3e5fc; /* Borda azul clara */
+    border-radius: 8px;
+    appearance: none; /* Remove a aparência padrão do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    /* Adiciona um ícone de seta customizado */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23007bff" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    
+    /* Transição suave para hover e focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+#difficulty-select:hover {
+    border-color: #0056b3; /* Cor mais escura no hover */
+}
+
+/* Efeito ao focar (clicar/tab) */
+#difficulty-select:focus {
+    outline: none; /* Remove o outline padrão */
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25); /* Sombra de foco azul */
+}
+
+/* Estilo para as opções (dentro do <select>) */
+#difficulty-select option {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+    background-color: #ffffff;
+}
+
+                     /* Media Query para telas menores que 600px (smartphones) */
+                                    /* CODIGO SELETOR PAGINA 5 */
+
+@media (max-width: 600px) {
+    #difficulty-box {
+        width: 90%; 
+        max-width: none; 
+        padding: 15px; 
+        margin: 15px auto;
+    }
+
+    #difficulty-box label {
+        font-size: 15px;
+    }
+
+    #difficulty-select {
+        padding: 10px 12px; 
+        font-size: 15px;
+    }
+}
+
+/* Media Query opcional para telas muito pequenas, caso necessário */
+@media (max-width: 320px) {
+    #difficulty-box {
+        padding: 10px;
+    }
+}
+
 
