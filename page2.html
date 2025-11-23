@@ -5,11 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeo Aula – Página 2</title>
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 📌 CSS QUE VOCÊ PEDIU -->
+    <style>
+        /* Contêiner do vídeo para controlar tamanho e responsividade */
+        .video-container {
+            width: 90%;              /* Mais largo */
+            max-width: 900px;        /* Limite para não estourar em telas grandes */
+            margin: 20px auto;       /* Centraliza */
+            
+            /* Diminui a altura (menos vertical) */
+            aspect-ratio: 16 / 9;    /* Mais horizontal */
+            
+            border-radius: 12px;     /* Cantos arredondados (opcional) */
+            overflow: hidden;        /* Faz o raio funcionar */
+        }
+
+        /* Deixa o vídeo sempre encaixado perfeitamente */
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;       /* Corta um pouco em cima/baixo para ficar menos vertical */
+        }
+
+        /* 📱 RESPONSIVO PARA CELULAR */
+        @media (max-width: 600px) {
+            .video-container {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <h1>Página 2</h1>
-
 
 <header>
     <div class="nav-buttons">
@@ -20,11 +50,15 @@
 
 <main>
     <section class="page">
-        <h1>Vídeo Aula</h1>
+        <h1>Demostração a uma apresentação</h1>
 
-        <video id="video1" controls width="100%">
-            <source src="assets/video/aula1.mp4" type="video/mp4">
-        </video>
+        <!-- 📌 Adicionei um contêiner para aplicar o CSS (NÃO alterei seu vídeo) -->
+        <div class="video-container">
+            <video id="video1" controls width="100%">
+                <source src="assets/video/aula1.mp4" type="video/mp4">
+            </video>
+        </div>
+
     </section>
 </main>
 
