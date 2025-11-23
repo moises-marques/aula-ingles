@@ -26,6 +26,7 @@ header {
     gap: 20px;
 }
 
+
 /* LINKS DOS BOTÕES */
 .nav-buttons a {
     text-decoration: none;
@@ -206,6 +207,33 @@ main {
     background: #3b82f6;
 }
 
+/* 📱 RESPONSIVO PARA CELULAR — deixar os dois botões lado a lado */
+@media (max-width: 600px) {
+    #restart-timer-btn,
+    #restart-quiz-btn {
+        margin: 15px;
+        flex: 0 0 auto; /* impede esticar */
+        white-space: nowrap;
+    }
+
+    /* força o container a virar flex sem alterar o HTML */
+    #restart-timer-btn,
+    #restart-quiz-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* agora o container REAL dos botões vira flex */
+    #restart-timer-btn, 
+    #restart-quiz-btn {
+        vertical-align: middle;
+        
+    }
+}
+
+
+
                                        /* PERGUNTAS */
 
 #quiz p {
@@ -215,6 +243,23 @@ main {
     display: inline-block; /* ← ESSA LINHA resolve */
     border-radius: 6px;
 }
+
+/* 📱 RESPONSIVO PARA CELULAR */
+@media (max-width: 480px) {
+    #quiz p {
+        padding: 10px 20px !important;  /* Reduz o padding para caber na tela */
+        display: inline-block;          /* Mantém o texto lado a lado */
+        background: #1b04ee;            /* Mantém a cor */
+        color: #fff;
+        border-radius: 6px;
+        max-width: 100%;                /* Garante que não ultrapasse a largura */
+        box-sizing: border-box;         /* Faz o padding contar dentro da largura */
+        margin: 0 auto;                 /* Centraliza dentro do body */
+        text-align: center;             /* Centraliza o texto */
+        white-space: nowrap;            /* Mantém tudo na mesma linha */
+    }
+}
+
 
                                /* Difficulty selector page5 */
 
